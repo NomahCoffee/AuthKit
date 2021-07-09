@@ -1,0 +1,41 @@
+PODS:
+  - Alamofire (5.4.3)
+  - AuthKit (1.0):
+    - Alamofire (~> 5.2)
+    - NCUtils (~> 1.1)
+    - SnapKit (~> 5.0)
+    - SwiftyJSON (~> 4.0)
+  - NCUtils (1.2):
+    - NCUtils/Extensions (= 1.2)
+    - NCUtils/TextFields (= 1.2)
+  - NCUtils/Extensions (1.2)
+  - NCUtils/TextFields (1.2)
+  - SnapKit (5.0.1)
+  - SwiftyJSON (4.3.0)
+
+DEPENDENCIES:
+  - AuthKit (from `../`)
+  - SnapKit (~> 5.0.0)
+
+SPEC REPOS:
+  https://github.com/NomahCoffee/NCPodspec.git:
+    - NCUtils
+  trunk:
+    - Alamofire
+    - SnapKit
+    - SwiftyJSON
+
+EXTERNAL SOURCES:
+  AuthKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  AuthKit: 908831cf26e5b26b445b0db3d5ffb3a375378d72
+  NCUtils: 8689f1558cbc6153df7e5d124cbbab4b97e39975
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+
+PODFILE CHECKSUM: b35a3671aa764ca0b4b209e2cb638e04c4e1a5d5
+
+COCOAPODS: 1.10.1

@@ -10,12 +10,17 @@
 		82AFA9BC269647AA00E20E4A /* AuthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82AFA9B2269647AA00E20E4A /* AuthKit.framework */; };
 		82AFA9C1269647AA00E20E4A /* AuthKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AFA9C0269647AA00E20E4A /* AuthKitTests.swift */; };
 		82AFA9C3269647AA00E20E4A /* AuthKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 82AFA9B5269647AA00E20E4A /* AuthKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		82AFA9D32696483500E20E4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AFA9D22696483500E20E4A /* AppDelegate.swift */; };
-		82AFA9D52696483500E20E4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AFA9D42696483500E20E4A /* SceneDelegate.swift */; };
-		82AFA9D72696483500E20E4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AFA9D62696483500E20E4A /* ViewController.swift */; };
-		82AFA9DA2696483500E20E4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82AFA9D82696483500E20E4A /* Main.storyboard */; };
-		82AFA9DC2696483700E20E4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82AFA9DB2696483700E20E4A /* Assets.xcassets */; };
-		82AFA9DF2696483700E20E4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82AFA9DD2696483700E20E4A /* LaunchScreen.storyboard */; };
+		82AFA9E926964FE700E20E4A /* AuthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AFA9E826964FE700E20E4A /* AuthKitManager.swift */; };
+		82AFA9EB269650A200E20E4A /* AuthKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AFA9EA269650A200E20E4A /* AuthKitService.swift */; };
+		82AFA9ED269650C600E20E4A /* AuthKitMembershipOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AFA9EC269650C600E20E4A /* AuthKitMembershipOption.swift */; };
+		82AFA9EF269650DF00E20E4A /* AuthKitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AFA9EE269650DF00E20E4A /* AuthKitError.swift */; };
+		82AFA9F12696516500E20E4A /* AuthKitUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AFA9F02696516500E20E4A /* AuthKitUser.swift */; };
+		82AFA9F3269663A200E20E4A /* MembershipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AFA9F2269663A200E20E4A /* MembershipViewController.swift */; };
+		82AFA9F6269663D300E20E4A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AFA9F5269663D300E20E4A /* LoginView.swift */; };
+		82AFA9F8269663DD00E20E4A /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AFA9F7269663DD00E20E4A /* SignupView.swift */; };
+		82AFA9FB2696644600E20E4A /* MembershipViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AFA9FA2696644600E20E4A /* MembershipViewDelegate.swift */; };
+		82AFA9FD2696645700E20E4A /* MembershipError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AFA9FC2696645700E20E4A /* MembershipError.swift */; };
+		82AFAA002696647300E20E4A /* MembershipConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AFA9FF2696647300E20E4A /* MembershipConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,13 +41,17 @@
 		82AFA9C0269647AA00E20E4A /* AuthKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthKitTests.swift; sourceTree = "<group>"; };
 		82AFA9C2269647AA00E20E4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82AFA9D02696483500E20E4A /* AuthKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		82AFA9D22696483500E20E4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		82AFA9D42696483500E20E4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		82AFA9D62696483500E20E4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		82AFA9D92696483500E20E4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		82AFA9DB2696483700E20E4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		82AFA9DE2696483700E20E4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		82AFA9E02696483700E20E4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82AFA9E826964FE700E20E4A /* AuthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthKitManager.swift; sourceTree = "<group>"; };
+		82AFA9EA269650A200E20E4A /* AuthKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthKitService.swift; sourceTree = "<group>"; };
+		82AFA9EC269650C600E20E4A /* AuthKitMembershipOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthKitMembershipOption.swift; sourceTree = "<group>"; };
+		82AFA9EE269650DF00E20E4A /* AuthKitError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthKitError.swift; sourceTree = "<group>"; };
+		82AFA9F02696516500E20E4A /* AuthKitUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthKitUser.swift; sourceTree = "<group>"; };
+		82AFA9F2269663A200E20E4A /* MembershipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembershipViewController.swift; sourceTree = "<group>"; };
+		82AFA9F5269663D300E20E4A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		82AFA9F7269663DD00E20E4A /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		82AFA9FA2696644600E20E4A /* MembershipViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembershipViewDelegate.swift; sourceTree = "<group>"; };
+		82AFA9FC2696645700E20E4A /* MembershipError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembershipError.swift; sourceTree = "<group>"; };
+		82AFA9FF2696647300E20E4A /* MembershipConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembershipConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +85,6 @@
 			children = (
 				82AFA9B4269647AA00E20E4A /* AuthKit */,
 				82AFA9BF269647AA00E20E4A /* AuthKitTests */,
-				82AFA9D12696483500E20E4A /* AuthKitExample */,
 				82AFA9B3269647AA00E20E4A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,6 +102,8 @@
 		82AFA9B4269647AA00E20E4A /* AuthKit */ = {
 			isa = PBXGroup;
 			children = (
+				82AFA9E426964FB700E20E4A /* AuthKitAPI */,
+				82AFA9E526964FBE00E20E4A /* AuthKitUI */,
 				82AFA9B5269647AA00E20E4A /* AuthKit.h */,
 				82AFA9B6269647AA00E20E4A /* Info.plist */,
 			);
@@ -109,18 +119,69 @@
 			path = AuthKitTests;
 			sourceTree = "<group>";
 		};
-		82AFA9D12696483500E20E4A /* AuthKitExample */ = {
+		82AFA9E426964FB700E20E4A /* AuthKitAPI */ = {
 			isa = PBXGroup;
 			children = (
-				82AFA9D22696483500E20E4A /* AppDelegate.swift */,
-				82AFA9D42696483500E20E4A /* SceneDelegate.swift */,
-				82AFA9D62696483500E20E4A /* ViewController.swift */,
-				82AFA9D82696483500E20E4A /* Main.storyboard */,
-				82AFA9DB2696483700E20E4A /* Assets.xcassets */,
-				82AFA9DD2696483700E20E4A /* LaunchScreen.storyboard */,
-				82AFA9E02696483700E20E4A /* Info.plist */,
+				82AFA9E826964FE700E20E4A /* AuthKitManager.swift */,
+				82AFA9E726964FD800E20E4A /* API */,
+				82AFA9E626964FCC00E20E4A /* Models */,
 			);
-			path = AuthKitExample;
+			path = AuthKitAPI;
+			sourceTree = "<group>";
+		};
+		82AFA9E526964FBE00E20E4A /* AuthKitUI */ = {
+			isa = PBXGroup;
+			children = (
+				82AFA9F2269663A200E20E4A /* MembershipViewController.swift */,
+				82AFA9F4269663BA00E20E4A /* Views */,
+				82AFA9F92696642E00E20E4A /* Models */,
+				82AFA9FE2696646200E20E4A /* Constants */,
+			);
+			path = AuthKitUI;
+			sourceTree = "<group>";
+		};
+		82AFA9E626964FCC00E20E4A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				82AFA9EC269650C600E20E4A /* AuthKitMembershipOption.swift */,
+				82AFA9EE269650DF00E20E4A /* AuthKitError.swift */,
+				82AFA9F02696516500E20E4A /* AuthKitUser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		82AFA9E726964FD800E20E4A /* API */ = {
+			isa = PBXGroup;
+			children = (
+				82AFA9EA269650A200E20E4A /* AuthKitService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		82AFA9F4269663BA00E20E4A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				82AFA9F5269663D300E20E4A /* LoginView.swift */,
+				82AFA9F7269663DD00E20E4A /* SignupView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		82AFA9F92696642E00E20E4A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				82AFA9FA2696644600E20E4A /* MembershipViewDelegate.swift */,
+				82AFA9FC2696645700E20E4A /* MembershipError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		82AFA9FE2696646200E20E4A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				82AFA9FF2696647300E20E4A /* MembershipConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +262,7 @@
 				TargetAttributes = {
 					82AFA9B1269647AA00E20E4A = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 					82AFA9BA269647AA00E20E4A = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -249,9 +311,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82AFA9DF2696483700E20E4A /* LaunchScreen.storyboard in Resources */,
-				82AFA9DC2696483700E20E4A /* Assets.xcassets in Resources */,
-				82AFA9DA2696483500E20E4A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +321,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82AFAA002696647300E20E4A /* MembershipConstants.swift in Sources */,
+				82AFA9F3269663A200E20E4A /* MembershipViewController.swift in Sources */,
+				82AFA9F6269663D300E20E4A /* LoginView.swift in Sources */,
+				82AFA9F12696516500E20E4A /* AuthKitUser.swift in Sources */,
+				82AFA9EB269650A200E20E4A /* AuthKitService.swift in Sources */,
+				82AFA9F8269663DD00E20E4A /* SignupView.swift in Sources */,
+				82AFA9EF269650DF00E20E4A /* AuthKitError.swift in Sources */,
+				82AFA9FD2696645700E20E4A /* MembershipError.swift in Sources */,
+				82AFA9ED269650C600E20E4A /* AuthKitMembershipOption.swift in Sources */,
+				82AFA9FB2696644600E20E4A /* MembershipViewDelegate.swift in Sources */,
+				82AFA9E926964FE700E20E4A /* AuthKitManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,9 +347,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82AFA9D72696483500E20E4A /* ViewController.swift in Sources */,
-				82AFA9D32696483500E20E4A /* AppDelegate.swift in Sources */,
-				82AFA9D52696483500E20E4A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,25 +359,6 @@
 			targetProxy = 82AFA9BD269647AA00E20E4A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		82AFA9D82696483500E20E4A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				82AFA9D92696483500E20E4A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		82AFA9DD2696483700E20E4A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				82AFA9DE2696483700E20E4A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		82AFA9C4269647AA00E20E4A /* Debug */ = {
@@ -438,6 +486,7 @@
 		82AFA9C7269647AA00E20E4A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 92DETN2MKQ;
@@ -454,6 +503,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.calebrudnicki.AuthKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -462,6 +512,7 @@
 		82AFA9C8269647AA00E20E4A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 92DETN2MKQ;
@@ -486,6 +537,7 @@
 		82AFA9CA269647AA00E20E4A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 92DETN2MKQ;
 				INFOPLIST_FILE = AuthKitTests/Info.plist;
@@ -504,6 +556,7 @@
 		82AFA9CB269647AA00E20E4A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 92DETN2MKQ;
 				INFOPLIST_FILE = AuthKitTests/Info.plist;
