@@ -246,4 +246,12 @@ public class AuthKitManager {
         })
     }
     
+    /// Manually updates the current user value.
+    ///
+    /// This is used best whenever a anything within the user object changes. For instance, call this function
+    /// if a user changes their name, email, update their shopping cart, etc.
+    public func updateCurrentUser() {
+        AuthKitService.setCurrentUser(completion: nil)
+    }
+    
 }

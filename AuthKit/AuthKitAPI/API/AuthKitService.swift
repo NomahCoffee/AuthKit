@@ -126,9 +126,9 @@ struct AuthKitService {
     /// Grabs and sets the current user.
     /// - Parameter completion: a completion block of type `AuthKitUser?` that will send the user
     /// in the success case and nil in the case of a failure
-    static func setCurrentUser(completion: @escaping (AuthKitError?) -> Void) {
+    static func setCurrentUser(completion: ((AuthKitError?) -> Void)? = nil) {
         guard let authToken = UserDefaults().string(forKey: "authToken") else {
-            completion(.lostAuthToken)
+            completion?(.lostAuthToken)
             return
         }
         
@@ -146,12 +146,12 @@ struct AuthKitService {
                         from: data
                     )
                     AuthKitManager.shared.currentUser = user
-                    completion(nil)
+                    completion?(nil)
                 } catch _ {
-                    completion(.failedToSetCurrentUser)
+                    completion?(.failedToSetCurrentUser)
                 }
             case .failure(_):
-                completion(.failedToSetCurrentUser)
+                completion?(.failedToSetCurrentUser)
             }
         }
     }
