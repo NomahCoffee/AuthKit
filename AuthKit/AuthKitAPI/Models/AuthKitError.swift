@@ -14,6 +14,7 @@ enum AuthKitError {
     case failedSignup
     case failedLogout
     case nonSuperuserRestricted
+    case failedToSetCurrentUser
     case generic
     
     /// Title of the error to be shown in a modal
@@ -29,6 +30,8 @@ enum AuthKitError {
             return "Unable to logout for the current user"
         case .nonSuperuserRestricted:
             return "This user is not a superuser"
+        case .failedToSetCurrentUser:
+            return "Could not set the current user"
         case .generic:
             return "Something went wrong with the network request"
         }
@@ -37,7 +40,7 @@ enum AuthKitError {
     /// Message of the error to be shown in a modal
     var message: String? {
         switch self {
-        case .lostAuthToken, .failedLogout, .generic:
+        case .lostAuthToken, .failedLogout, .failedToSetCurrentUser, .generic:
             return nil
         case .failedLogin, .failedSignup:
             return "Make sure to enter all of your credentials properly and that spelling is correct."

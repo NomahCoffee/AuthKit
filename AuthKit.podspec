@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "AuthKit"
-  spec.version      = "1.0"
+  spec.version      = "1.1"
   spec.summary      = "An authentication framework for all Nomah Coffee iOS host applications."
   spec.description  = <<-DESC
 This library is an authentication framework for any Nomah Coffee iOS applications.
@@ -17,7 +17,6 @@ It handles both the networking and the UI work related to any sort of authentica
   spec.requires_arc = true
   spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   spec.dependency 'Alamofire', '~> 5.2'
-  spec.dependency 'SwiftyJSON', '~> 4.0'
   spec.dependency 'SnapKit', '~> 5.0'
   spec.dependency 'NCUtils', '~> 1.1'
 

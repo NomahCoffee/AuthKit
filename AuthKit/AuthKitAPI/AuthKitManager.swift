@@ -50,6 +50,61 @@ public class AuthKitManager {
     /// all types of users, then you can leave this value alone. Default value is `false`.
     public var onlySuperuser: Bool = false
     
+    /// A class type to allow client app to set the custom user class.
+    ///
+    /// AuthKit allows you to pass in your own custom user class. To follow the requirements and make things
+    /// smoothly, your custom user class must be a subclass of `AuthKitUser` Here is an example:
+    /// ```
+    /// import AuthKit
+    ///
+    /// class ExampleUser: AuthKitUser {
+    ///
+    ///     var phoneNumber: String
+    ///
+    ///     public required init(from decoder: Decoder) throws {
+    ///         let values = try decoder.container(keyedBy: CodingKeys.self)
+    ///         stripeID = try values.decode(String.self, forKey: .stripeID)
+    ///         try super.init(from: decoder)
+    ///     }
+    ///
+    ///     override func encode(to encoder: Encoder) throws {
+    ///         var container = encoder.container(keyedBy: CodingKeys.self)
+    ///         try container.encode(stripeID, forKey: .stripeID)
+    ///     }
+    ///     
+    /// }
+    /// ```
+    /// This custom subclass of `AuthKitUser` called `ExampleUser` adds a phone number field on top of the
+    /// base user class provided by `AuthKit`.
+    ///
+    /// Once your custom user class is setup, you can tell `AuthKit` to use this custom class by the following:
+    /// ```
+    /// AuthKitManager.shared.userClass = ExampleUser.self
+    /// ```
+    /// Make sure that you set this value before doing any sort of action functions (i.e. `startSession`, etc)
+    /// if you want `AuthKit` to use your custom user class.
+    public var userClass: AnyClass?
+    
+    /// A reference to the current user.
+    ///
+    /// If you ever need any reference to the current user who is logged into your application, just call
+    /// `AuthKitManager.shared.currentUser`. This value is optional so you must unwrap it as either a
+    /// `AuthKitUser` or your custom user class (that you assigned to the `AuthKitManager.shared.userClass`.
+    /// This value is optional so if there is no value for current user, then something has gone wrong.
+    ///
+    /// For example, if you have a custom user class named `ExampleUser`.
+    /// Your code should look like the following:
+    /// ```
+    /// AuthKitManager.shared.userClass = ExampleUser.self
+    ///
+    /// // Grab current user
+    /// if let currentUser = AuthKitManager.shared.currentUser as? ExampleUser {
+    ///     // Now you can use currentUser as you wish
+    ///     print(currentUser.firstName)
+    /// }
+    /// ```
+    public var currentUser: AuthKitUser?
+    
     // MARK: Private Properties
     
     /// A view controller for the preset screen to be shown.
@@ -116,7 +171,12 @@ public class AuthKitManager {
         window.rootViewController = homeViewController
         if let authToken = UserDefaults().string(forKey: "authToken"), !authToken.isEmpty {
             // There exists an auth token that is not empty, so keep it as is and complete this function
-            completion(false)
+            // once you set the current user
+            AuthKitService.setCurrentUser(completion: { error in
+                if error == nil {
+                    completion(false)
+                }
+            })
         } else {
             completion(true)
         }

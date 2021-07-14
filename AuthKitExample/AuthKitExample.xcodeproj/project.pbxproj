@@ -13,6 +13,7 @@
 		822CA0E92698AA9D00BD6EFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822CA0E82698AA9D00BD6EFE /* ViewController.swift */; };
 		822CA0EE2698AA9F00BD6EFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 822CA0ED2698AA9F00BD6EFE /* Assets.xcassets */; };
 		822CA0F12698AA9F00BD6EFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822CA0EF2698AA9F00BD6EFE /* LaunchScreen.storyboard */; };
+		82FAA9DB269E22F8006E3E28 /* ExampleUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FAA9DA269E22F8006E3E28 /* ExampleUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		822CA0ED2698AA9F00BD6EFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		822CA0F02698AA9F00BD6EFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		822CA0F22698AA9F00BD6EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82FAA9DA269E22F8006E3E28 /* ExampleUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleUser.swift; sourceTree = "<group>"; };
 		DC9800F5AA62E451D37E499B /* Pods_AuthKitExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AuthKitExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EE989897D6329CC35C2E8C /* Pods-AuthKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthKitExample.release.xcconfig"; path = "Target Support Files/Pods-AuthKitExample/Pods-AuthKitExample.release.xcconfig"; sourceTree = "<group>"; };
 		FDE4154D38D4F9251BB09253 /* Pods-AuthKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthKitExample.debug.xcconfig"; path = "Target Support Files/Pods-AuthKitExample/Pods-AuthKitExample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				822CA0E42698AA9D00BD6EFE /* AppDelegate.swift */,
 				822CA0E62698AA9D00BD6EFE /* SceneDelegate.swift */,
 				822CA0E82698AA9D00BD6EFE /* ViewController.swift */,
+				82FAA9DA269E22F8006E3E28 /* ExampleUser.swift */,
 				822CA0ED2698AA9F00BD6EFE /* Assets.xcassets */,
 				822CA0EF2698AA9F00BD6EFE /* LaunchScreen.storyboard */,
 				822CA0F22698AA9F00BD6EFE /* Info.plist */,
@@ -204,6 +207,7 @@
 				822CA0E92698AA9D00BD6EFE /* ViewController.swift in Sources */,
 				822CA0E52698AA9D00BD6EFE /* AppDelegate.swift in Sources */,
 				822CA0E72698AA9D00BD6EFE /* SceneDelegate.swift in Sources */,
+				82FAA9DB269E22F8006E3E28 /* ExampleUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

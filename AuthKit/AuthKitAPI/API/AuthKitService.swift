@@ -7,7 +7,6 @@
 
 import Foundation
 import Alamofire
-import SwiftyJSON
 
 struct AuthKitService {
     
@@ -26,12 +25,25 @@ struct AuthKitService {
                              "password": password]
             ).responseJSON { response in
                 switch response.result {
-                case .success(let data):
-                    let json = JSON(data)
-                    if json["auth_token"].exists() {
-                        completion(json["auth_token"].stringValue, nil)
-                    } else {
+                case .success(_):
+                    guard
+                        let data = response.data,
+                        let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any],
+                        let authToken = json["auth_token"] as? String
+                    else {
                         completion(nil, .lostAuthToken)
+                        return
+                    }
+                    
+                    UserDefaults().set(authToken, forKey: "authToken")
+                    
+                    // Set current user
+                    if let userClass = AuthKitManager.shared.userClass,
+                       userClass.self.isSubclass(of: AuthKitUser.self) {
+                        setCurrentUser(completion: { error in
+                            // Successfully got auth token and set user
+                            completion(authToken, error)
+                        })
                     }
                 case .failure(_):
                     completion(nil, .failedLogin)
@@ -107,6 +119,39 @@ struct AuthKitService {
                 completion(nil)
             case .failure(_):
                 completion(.failedLogout)
+            }
+        }
+    }
+        
+    /// Grabs and sets the current user.
+    /// - Parameter completion: a completion block of type `AuthKitUser?` that will send the user
+    /// in the success case and nil in the case of a failure
+    static func setCurrentUser(completion: @escaping (AuthKitError?) -> Void) {
+        guard let authToken = UserDefaults().string(forKey: "authToken") else {
+            completion(.lostAuthToken)
+            return
+        }
+        
+        AF.request(
+            "http://127.0.0.1:8000/auth/users/me/",
+            method: .get,
+            headers: getHeaders(with: authToken)
+        ).responseJSON { response in
+            switch response.result {
+            case .success(_):
+                guard let data = response.data else { return }
+                do {
+                    let user = try JSONDecoder().decode(
+                        AuthKitManager.shared.userClass.self as! AuthKitUser.Type,
+                        from: data
+                    )
+                    AuthKitManager.shared.currentUser = user
+                    completion(nil)
+                } catch _ {
+                    completion(.failedToSetCurrentUser)
+                }
+            case .failure(_):
+                completion(.failedToSetCurrentUser)
             }
         }
     }

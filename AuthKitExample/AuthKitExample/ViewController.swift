@@ -43,6 +43,14 @@ class ViewController: UIViewController {
         return logoutButtonToSignupOnly
     }()
     
+    let printCurrentUserButton: UIButton = {
+        let printCurrentUserButton = UIButton()
+        printCurrentUserButton.setTitle("Print Current User", for: .normal)
+        printCurrentUserButton.setTitleColor(.label, for: .normal)
+        printCurrentUserButton.addTarget(self, action: #selector(printCurrentUserButtonTapped), for: .touchUpInside)
+        return printCurrentUserButton
+    }()
+    
     let stack: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
@@ -57,10 +65,10 @@ class ViewController: UIViewController {
         view.backgroundColor = .systemBackground
         view.addSubview(stack)
         
-        stack.addArrangedSubview(logoutButtonNoChange)
-        stack.addArrangedSubview(logoutButtonBothLoginAndLogout)
-        stack.addArrangedSubview(logoutButtonToLoginOnly)
-        stack.addArrangedSubview(logoutButtonToSignupOnly)
+        stack.addArrangedSubviews(
+            [logoutButtonNoChange, logoutButtonBothLoginAndLogout, logoutButtonToLoginOnly,
+             logoutButtonToSignupOnly, printCurrentUserButton]
+        )
         
         stack.snp.makeConstraints { make in
             make.edges.centerY.equalToSuperview()
@@ -84,6 +92,12 @@ class ViewController: UIViewController {
     @objc private func logoutButtonToSignupOnlyTapped() {
         AuthKitManager.shared.membershipOption = .signupOnly
         AuthKitManager.shared.logout(from: self)
+    }
+    
+    @objc private func printCurrentUserButtonTapped() {
+        if let user = AuthKitManager.shared.currentUser as? ExampleUser {
+            print("Current user: \(user.firstName) \(user.lastName)")
+        }
     }
 
 }

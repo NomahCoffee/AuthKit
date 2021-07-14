@@ -74,7 +74,6 @@ class MembershipViewController: UIViewController, LoginViewDelegate, SignupViewD
                 return
             }
             
-            UserDefaults().set(authToken, forKey: "authToken")
             // Dismiss the viewController to unveil the viewController underneath, typically the
             // viewController assigned to homeViewController of AuthKitManager
             self.dismiss(animated: true, completion: nil)
