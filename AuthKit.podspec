@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "AuthKit"
-  spec.version      = "1.1"
+  spec.version      = "1.2"
   spec.summary      = "An authentication framework for all Nomah Coffee iOS host applications."
   spec.description  = <<-DESC
 This library is an authentication framework for any Nomah Coffee iOS applications.
