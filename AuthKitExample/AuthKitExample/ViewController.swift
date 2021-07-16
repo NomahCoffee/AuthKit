@@ -40,6 +40,7 @@ class ViewController: UIViewController {
         logoutButtonToSignupOnly.setTitle("Logout (show signup only)", for: .normal)
         logoutButtonToSignupOnly.setTitleColor(.label, for: .normal)
         logoutButtonToSignupOnly.addTarget(self, action: #selector(logoutButtonToSignupOnlyTapped), for: .touchUpInside)
+        logoutButtonToSignupOnly.titleLabel?.font = Fonts.Oxygen.button1
         return logoutButtonToSignupOnly
     }()
     

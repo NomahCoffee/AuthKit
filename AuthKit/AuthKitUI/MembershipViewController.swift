@@ -31,7 +31,7 @@ class MembershipViewController: UIViewController, LoginViewDelegate, SignupViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = UIColor(rgb: 0x856F55)
         view.addSubview(loginView)
         view.addSubview(signupView)
         
@@ -112,4 +112,13 @@ class MembershipViewController: UIViewController, LoginViewDelegate, SignupViewD
         present(alert, animated: true, completion: nil)
     }
 
+}
+
+extension UIView {
+   func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        layer.mask = mask
+    }
 }

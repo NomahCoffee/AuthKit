@@ -10,7 +10,8 @@ import Foundation
 struct MembershipConstants {
     
     struct Login {
-        static let headerTitle: String = "Log in to Nomah Coffee Admin"
+        static let headerTitle: String = "Welcome Back!"
+        static let headerSubtitle: String = "Please sign into your account"
         static let emailTextFieldPlaceholder: String = "Email address"
         static let passwordTextFieldPlaceholder: String = "Password"
         static let toggleButtonTitle: String = "Go to sign up"
@@ -18,7 +19,8 @@ struct MembershipConstants {
     }
     
     struct Signup {
-        static let headerTitle: String = "Sign up for Nomah Coffee Admin"
+        static let headerTitle: String = "Create New Account"
+        static let headerSubtitle: String = "Please fill in the form to continue"
         static let emailTextFieldPlaceholder: String = "Email address"
         static let usernameTextFieldPlaceholder: String = "Username"
         static let firstNameTextFieldPlaceholder: String = "First name"
@@ -29,7 +31,7 @@ struct MembershipConstants {
         static let submitButtonTitle: String = "Sign up"
     }
     
-    static let stackSpacing: CGFloat = 8
+    static let stackSpacing: CGFloat = 16
     static let stackHorizontalInset: CGFloat = 8
     static let submitButtonHeight: CGFloat = 64
     

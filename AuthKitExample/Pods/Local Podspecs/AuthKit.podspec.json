@@ -1,6 +1,6 @@
 {
   "name": "AuthKit",
-  "version": "1.0",
+  "version": "1.2",
   "summary": "An authentication framework for all Nomah Coffee iOS host applications.",
   "description": "This library is an authentication framework for any Nomah Coffee iOS applications.\nIt handles both the networking and the UI work related to any sort of authentication work.",
   "homepage": "https://github.com/NomahCoffee/AuthKit",
@@ -17,7 +17,7 @@
   "swift_versions": "5.0",
   "source": {
     "git": "https://github.com/NomahCoffee/AuthKit.git",
-    "tag": "1.0"
+    "tag": "1.2"
   },
   "source_files": "AuthKit/**/*.{h,m,swift}",
   "requires_arc": true,
@@ -27,9 +27,6 @@
   "dependencies": {
     "Alamofire": [
       "~> 5.2"
-    ],
-    "SwiftyJSON": [
-      "~> 4.0"
     ],
     "SnapKit": [
       "~> 5.0"
