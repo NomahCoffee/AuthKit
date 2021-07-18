@@ -22,6 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         AuthKitManager.shared.homeViewController = ViewController()
         AuthKitManager.shared.userClass = ExampleUser.self
+//        AuthKitManager.shared.membershipOption = .loginOnly
         AuthKitManager.shared.startSession(from: window, completion: { showMembershipScreen in
             window.makeKeyAndVisible()
             self.window = window
