@@ -59,7 +59,6 @@ internal class TakeActionView: UIView {
         submitButton.titleLabel?.font = Fonts.Oxygen.button1
         submitButton.layer.cornerRadius = MembershipConstants.submitButtonCornerRadius
         submitButton.setTitleColor(.white, for: .normal)
-        submitButton.addTarget(self, action: #selector(submitButtonTapped), for: .touchUpInside)
         return submitButton
     }()
     
@@ -74,7 +73,6 @@ internal class TakeActionView: UIView {
         let goToButton = UIButton()
         goToButton.titleLabel?.font = Fonts.Oxygen.subtitle2
         goToButton.setTitleColor(Colors.rockBlue, for: .normal)
-        goToButton.addTarget(self, action: #selector(goToButtonTapped), for: .touchUpInside)
         return goToButton
     }()
     
@@ -84,6 +82,19 @@ internal class TakeActionView: UIView {
         goToStack.spacing = MembershipConstants.goToStackSpacing
         return goToStack
     }()
+    
+    // MARK: Init
+    
+    init() {
+        super.init(frame: .zero)
+        
+        submitButton.addTarget(self, action: #selector(submitButtonTapped), for: .touchUpInside)
+        goToButton.addTarget(self, action: #selector(goToButtonTapped), for: .touchUpInside)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     // MARK: Overrides
     
